@@ -1,1 +1,3 @@
-//Preparacion de ambiente de trabajo,cracion de componentes
+export default function Cards() {
+  return <h1>Todas las cartas 🃏</h1>;
+}

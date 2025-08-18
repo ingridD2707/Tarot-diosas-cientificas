@@ -1,1 +1,3 @@
-//Preparacion de ambiente de trabajo,cracion de componentes
+export default function Home(){
+    return<h1>inicio 🔮</h1>
+}

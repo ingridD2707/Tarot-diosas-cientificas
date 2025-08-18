@@ -3,10 +3,11 @@ import Home from "../pages/Home";
 import TarotCards from "../pages/TarotCards";
 import TarotDetail from "../pages/TarotDetail";
 import Layout from "../layout/Layout";
-import { Children } from "react";
+import ThrowTarot from "../pages/ThrowTarot";
 
 
-const routerTatot = createBrowserRouter([{
+
+const routerTarot = createBrowserRouter([{
 path:"/",
 element: <Layout/>,
 children: [
@@ -21,9 +22,13 @@ children: [
     {
         path: "/detalle-cartas/:id",
         element: <TarotDetail/>
+    },
+    {
+        path:"/tirada-cartas/:id",
+        element: <ThrowTarot/>
     }
 
 ]
 
 }])
-export default routerTatot;
+export default routerTarot;
