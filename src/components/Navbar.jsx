@@ -10,14 +10,15 @@ export default function SiteNavbar() {
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav">
           <Nav className="ms-auto">
-            {/* NavLink añade la clase "active" automáticamente */}
+            
             <Nav.Link as={NavLink} to="/" end>
               Inicio
             </Nav.Link>
             <Nav.Link as={NavLink} to="/cartas">
               Todas las cartas
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/tirada-cartas/:id">
+            <Nav.Link as={NavLink} to="/tirada">
+            Tirada
               
             </Nav.Link>
           </Nav>
