@@ -43,12 +43,15 @@ export default function TarotDetail() {
               <h3 className="card-title">{card.arcaneName}</h3>
               <p className="card-text">{card.arcaneDescription}</p>
               <hr />
-              <h5>Diosa asociada</h5>
+            
+            </div>
+            <div>
+               <h5>Diosa asociada</h5>
               <img
               src={card.goddessImage?.imageSrc}
               alt={card.goddessName}
               className="img-fluid rounded m-3"
-              style={{ maxHeight: "300px", objectFit: "cover" }}
+              style={{ maxHeight: "200px", objectFit: "cover" }}
             />
               <p className="fw-bold">{card.goddessName}</p>
               <p>{card.goddessDescription}</p>
