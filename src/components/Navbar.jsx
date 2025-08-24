@@ -1,49 +1,44 @@
-
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
+    <nav className="bg-black/90 backdrop-blur-md border-b border-yellow-700/30 shadow-lg shadow-yellow-900/40">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-2xl font-bold text-yellow-400 tracking-wide drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] hover:text-yellow-300 transition"
+        >
           🔮 Tarot
         </Link>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* Links */}
+        <div className="flex space-x-8">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `relative transition-all duration-300 hover:text-yellow-300 ${
+                isActive
+                  ? "text-yellow-400 font-semibold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-400"
+                  : "text-gray-300"
+              }`
+            }
+          >
+            🃏 Cartas
+          </NavLink>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active fw-bold" : "")
-                }
-              >
-                CARTAS
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/throw"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active fw-bold" : "")
-                }
-              >
-                TIRADA
-              </NavLink>
-            </li>
-          </ul>
+          <NavLink
+            to="/throw"
+            className={({ isActive }) =>
+              `relative transition-all duration-300 hover:text-yellow-300 ${
+                isActive
+                  ? "text-yellow-400 font-semibold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-400"
+                  : "text-gray-300"
+              }`
+            }
+          >
+            ✨ Tirada
+          </NavLink>
         </div>
       </div>
     </nav>
