@@ -1,12 +1,52 @@
-# React + Vite
+🔮 Proyecto Tarot Interactivo
+    Descripción
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web interactiva de lectura de cartas de tarot que combina diseño moderno con un enfoque educativo. A través de una interfaz clara e intuitiva, el usuario puede descubrir cartas, ver su significado, asociarlas a figuras inspiradoras y acceder a información detallada.
 
-Currently, two official plugins are available:
+El proyecto fue desarrollado en el marco del curso Full Stack Developer de Factoría F5
+, aplicando conceptos de desarrollo frontend, enrutado, componentes reutilizables y estilos modernos con TailwindCSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+    Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚛️ React: Librería principal para la construcción de la interfaz.
+
+🎨 TailwindCSS: Framework de estilos CSS utilitario para diseño responsivo.
+
+🗺️ React Router DOM: Manejo de rutas y navegación tipo SPA.
+
+    Estructura de carpetas
+src/
+├── components/          # Componentes reutilizables de la UI
+│   ├── Footer.jsx
+│   ├── Layout.jsx
+│   ├── Navbar.jsx
+│   └── TarotCard.jsx
+│
+├── image/               # Recursos gráficos
+│   └── backCard.png
+│
+├── pages/               # Páginas principales del sitio
+│   ├── Home.jsx
+│   ├── TarotDetail.jsx
+│   └── ThrowTarot.jsx
+│
+├── router/              # Configuración de rutas
+│   └── Router.jsx
+│
+├── services/            # Servicios de datos y lógica de negocio
+│   └── TarotServices.jsx
+│
+├── index.css            # Estilos globales
+├── main.jsx             # Punto de entrada de la aplicación
+
+
+   Próximas mejoras (roadmap)
+
+🔮 Animaciones más fluidas en las cartas (flip y hover).
+
+📱 Optimización completa para móviles y tablets.
+
+🌙 Modo oscuro configurable.
+
+🗄️ Integración con base de datos para guardar lecturas personalizadas.
