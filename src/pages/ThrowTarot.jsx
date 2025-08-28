@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { getAllCards } from "../services/TarotServices";
 import TarotCard from "../components/TarotCard";
+import { useNavigate } from "react-router-dom";
 
 const POSITIONS = ["Pasado", "Presente", "Futuro"];
 
@@ -11,6 +12,7 @@ export default function ThrowTarot() {
   const [loading, setLoading] = useState(true);
 
   const readingRef = useRef(null);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     (async () => {
@@ -115,8 +117,20 @@ export default function ThrowTarot() {
             onClick={() => handleClick(c)}
             selected={selectedIds.has(c.id)}
           />
+          
         ))}
+        
       </div>
+      <div className="flex justify-center mb-6">
+        <button
+        className="mb-6 px-4 py-2 rounded-lg border border-yellow-500 text-yellow-300 hover:bg-yellow-500 hover:text-black transition"
+        onClick={() => navigate("/")}
+      >
+        ← INICIO
+      </button>
+      </div>
+      
     </div>
+    
   );
 }

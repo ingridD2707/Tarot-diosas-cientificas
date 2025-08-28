@@ -7,7 +7,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className="no-underline text-2xl font-bold text-yellow-400 tracking-wide drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] hover:text-yellow-300 transition"
+          className="text-2xl font-bold text-yellow-400 tracking-wide drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] hover:text-yellow-300 transition"
         >
           🔮 Tarot
         </Link>
@@ -17,7 +17,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `no-underline relative transition-all duration-300 hover:text-yellow-300 ${
+              `relative transition-all duration-300 hover:text-yellow-300 ${
                 isActive
                   ? "text-yellow-400 font-semibold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-400"
                   : "text-gray-300"
@@ -30,7 +30,7 @@ export default function Navbar() {
           <NavLink
             to="/throw"
             className={({ isActive }) =>
-              `no-underline relative transition-all duration-300 hover:text-yellow-300 ${
+              `relative transition-all duration-300 hover:text-yellow-300 ${
                 isActive
                   ? "text-yellow-400 font-semibold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-400"
                   : "text-gray-300"

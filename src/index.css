@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+a {
+  color:  yellow; 
+  text-decoration: none;
+}
